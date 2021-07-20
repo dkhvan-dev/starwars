@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveStar - просмотр фильмов и мультфильмов</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <section class="header__logo">
+                <a href="#" class="header__logo-link">
+                    <img src="img/logo.png" alt="logo" class="header__logo-image">
+                </a>
+            </section>
+    
+            <section class="header__menu">
+                <div class="header__menu-nav nav">
+                    <span id="trigger" class="nav__trigger">
+                        <i class="nav__trigger-item"></i>
+                        <i class="nav__trigger-item"></i>
+                        <i class="nav__trigger-item"></i>
+                    </span>
+                    <ul id="menu" class="nav__menu">
+                        <li class="nav__menu-item"><a href="#" class="nav__menu-link">Фильмы</a></li>
+                        <li class="nav__menu-item"><a href="#" class="nav__menu-link">Актеры</a></li>
+                        <li class="nav__menu-item"><a href="#" class="nav__menu-link">Корабли</a></li>
+                    </ul>
+                </div>
+
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a href="#" class="header__list-link"><h2 class="header__list-title">Фильмы</h2></a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#" class="header__list-link"><h2 class="header__list-title">Актеры</h2></a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#" class="header__list-link"><h2 class="header__list-title">Корабли</h2></a>
+                    </li>
+                </ul>
+            </section>
+    
+        </header>
+    
+        <main class="main">
+            <section class="main__film film">
+                <div class="main__film-header">
+                    <h1 class="main__title">Фильмы</h1>
+                    <div class="search-block">
+                        <input type="search" class="film__search-input" v-model="searchFilm">
+                        <button type="button" class="film__search-btn" v-on:click="filmSearchHandler">Искать</button>
+                    </div>
+                </div>
+
+                <films__list :list-data="filteredFilms" /> 
+            </section>
+    
+            <section class="main__actors actors">
+                <div class="main__actors-header">
+                    <h1 class="main__title">Актеры</h1>
+                    <div class="search-block">
+                        <input type="search" class="actor__search-input" v-model="searchActor">
+                        <button type="button" class="actor__search-btn" v-on:click="actorSearchHandler">Искать</button>
+                    </div>
+                </div>
+
+                <actors__list :list-data="filteredActors"/>
+            </section>
+    
+            <section class="main__starships ships">
+                <div class="main__starships-header">
+                    <h1 class="main__title">Корабли</h1>
+                    <div class="search-block">
+                        <input type="search" class="starship__search-input" v-model="searchStarship">
+                        <button type="button" class="starship__search-btn" v-on:click="starshipSearchHandler">Искать</button>
+                    </div>
+                </div>
+
+                <starships__list :list-data="filteredStarships"/>
+            </section>
+    
+        </main>
+    
+        <footer class="footer">
+            <section class="footer__support">
+                <h1 class="footer__support-title">Поддержка пользователей</h1>
+                <hr>
+                <p class="footer__support-number">+7 953 777 53 03 <span class="footer__support-info">WhatsApp</span></p>
+                <p class="footer__support-email">support@gmail.com</p>
+            </section>
+            <section class="footer__partners">
+                <h1 class="footer__partners-title">Пользователям и партнёрам</h1>
+                <hr>
+                <ul class="socials">
+                    <li class="socials__item"><a href="#" class="socials__link"><img src="img/socials/facebook.png" alt="facebook" class="socials__picture"></a></li>
+                    <li class="socials__item"><a href="#" class="socials__link"><img src="img/socials/vk.png" alt="vk" class="socials__picture"></a></li>
+                    <li class="socials__item"><a href="#" class="socials__link"><img src="img/socials/instagram.png" alt="instagram" class="socials__picture"></a></li>
+                    <li class="socials__item"><a href="#" class="socials__link"><img src="img/socials/whatsapp.png" alt="whatsapp" class="socials__picture"></a></li>
+                </ul>
+                <p class="footer__copyright">&copy; 2021  Все права защищены.</p>
+            </section>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="vue.min.js"></script>
+    <script defer src="script.js"></script>
+</body>
+</html>
