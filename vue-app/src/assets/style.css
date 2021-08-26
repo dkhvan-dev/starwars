@@ -28,7 +28,7 @@ body {
   .header {
     height: 50px;
     padding-left: 26px;
-    padding-right: 26px;
+    padding-right: 10px;
     text-align: center;
     align-items: center;
   }
@@ -66,9 +66,6 @@ body {
   border-radius: 50%;
 }
 
-.nav {
-  display: none;
-}
 @media (min-width: 320px) and (max-width: 767px) {
   .nav {
     display: flex;
@@ -78,26 +75,37 @@ body {
 
 @media (min-width: 320px) and (max-width: 767px) {
   .nav__menu {
-    display: none;
-    position: absolute;
-    top: 70px;
+    margin-top: 36px;
     z-index: 1000;
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+  .nav__menu-close {
+    position: absolute;
+    left: 37%;
+    top: 7%;
+    padding: 5px 10px;
+    background-color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
   .nav__menu-item {
-    padding: 10px;
+    padding: 10px 40px;
     margin-top: 10px;
     background-color: #1b1a1a;
-    border: 1px solid #00e492;
+    border: 1px solid #fff;
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .nav__menu-link {
     font-size: 16px;
-    color: #00e492;
+    color: #fff;
     text-decoration: none;
   }
 }
@@ -117,12 +125,6 @@ body {
     height: 6px;
     margin: 4px auto;
     background: #fff;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .show {
-    display: block;
   }
 }
 
@@ -249,6 +251,9 @@ body {
 .actor__slider,
 .starship__slider {
   margin-top: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .film__slider-list,
@@ -295,75 +300,51 @@ body {
 }
 
 /* Кнопки вперед и назад */
-.actor__prev-slide,
-.actor__next-slide,
-.starship__prev-slide,
-.starship__next-slide {
-  width: auto;
-  position: absolute;
-  padding: 10px;
+.actor-nav, .starship-nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actor-nav__prev,
+.actor-nav__next,
+.starship-nav__prev,
+.starship-nav__next {
+  padding: 5px 10px;
   color: #fff;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 36px;
   transition: 0.6s ease;
   border-radius: 6px;
   background-color: #1b1a1a;
   border-color: #1b1a1a;
   cursor: pointer;
 }
-
-.actor__prev-slide,
-.actor__next-slide {
-  top: 50%;
-}
 @media (min-width: 768px) and (max-width: 1599px) {
-  .actor__prev-slide,
-.actor__next-slide {
-    top: 31.7%;
+  .actor-nav__prev,
+.actor-nav__next,
+.starship-nav__prev,
+.starship-nav__next {
     font-size: 24px;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  .actor__prev-slide,
-.actor__next-slide {
-    top: 5%;
+  .actor-nav__prev,
+.actor-nav__next,
+.starship-nav__prev,
+.starship-nav__next {
     font-size: 16px;
   }
 }
 
-.starship__prev-slide,
-.starship__next-slide {
-  top: 82%;
-}
-@media (min-width: 768px) and (max-width: 1599px) {
-  .starship__prev-slide,
-.starship__next-slide {
-    top: 69.3%;
-    font-size: 24px;
-  }
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  .starship__prev-slide,
-.starship__next-slide {
-    top: 5%;
-    font-size: 16px;
-  }
+.actor-nav__prev, .starship-nav__prev {
+  margin-right: 10px;
 }
 
-.actor__prev-slide,
-.starship__prev-slide {
-  left: 1%;
-}
-
-.actor__next-slide,
-.starship__next-slide {
-  right: 1%;
-}
-
-.actor__prev-slide:hover,
-.actor__next-slide:hover,
-.starship__prev-slide:hover,
-.starship__next-slide:hover {
+.actor-nav__prev:hover,
+.actor-nav__next:hover,
+.starship-nav__prev:hover,
+.starship-nav__next:hover {
   color: #000;
   background-color: rgba(255, 255, 255, 0.8);
   border-color: rgba(255, 255, 255, 0.8);

@@ -9,12 +9,13 @@
 
       <section class="header__menu">
           <div class="header__menu-nav nav">
-              <span id="trigger" class="nav__trigger">
+              <span class="nav__trigger" @click="hamburgerToggle()" v-if="!isOpenNav">
                   <i class="nav__trigger-item"></i>
                   <i class="nav__trigger-item"></i>
                   <i class="nav__trigger-item"></i>
               </span>
-              <ul id="menu" class="nav__menu">
+              <span class="nav__menu-close" @click="hamburgerToggle()" v-if="isOpenNav">X</span>
+              <ul class="nav__menu" v-if="isOpenNav">
                   <li class="nav__menu-item"><a href="#" class="nav__menu-link">Фильмы</a></li>
                   <li class="nav__menu-item"><a href="#" class="nav__menu-link">Актеры</a></li>
                   <li class="nav__menu-item"><a href="#" class="nav__menu-link">Корабли</a></li>
@@ -56,6 +57,11 @@
                     <button type="button" class="actor__search-btn" v-on:click="actorSearchHandler">Искать</button>
                 </div>
             </div>
+            
+            <div class="actor-nav">
+              <button type="button" class="actor-nav__prev" @click="actorsPrevPage()">&#10094;</button>
+              <button type="button" class="actor-nav__next" @click="actorsNextPage()">&#10095;</button>
+            </div>
 
             <ActorsList :filteredActors="filteredActors" />
         </section>
@@ -67,6 +73,11 @@
                     <input type="search" class="starship__search-input" v-model="searchStarship">
                     <button type="button" class="starship__search-btn" v-on:click="starshipSearchHandler">Искать</button>
                 </div>
+            </div>
+
+            <div class="starship-nav">
+              <button type="button" class="starship-nav__prev" @click="starshipsPrevPage()">&#10094;</button>
+              <button type="button" class="starship-nav__next" @click="starshipsNextPage()">&#10095;</button>
             </div>
 
             <StarshipsList :filteredStarships="filteredStarships" />
@@ -112,11 +123,13 @@
         // Переменные категории Films
         films: [] as any,
         filteredFilms: [] as any,
+        isOpenNav: false as boolean,
         
         // Переменные категории Actors
         actors: [] as any,
         filteredActors: [] as any,
         actorsPageNumber: 1 as number,
+        actorsMaxPageNumber: 1 as number,
         actorsName: [
           {actorName: 'Марк Хэмилл' as string},
           {actorName: 'Энтони Дэниелс' as string},
@@ -146,6 +159,7 @@
         starships: [] as any,
         filteredStarships: [] as any,
         starshipsPageNumber: 1 as number,
+        starshipsMaxPageNumber: 1 as number,
         starshipsImg: [
           {src: './assets/img/starships/cr90_corvette.jpg' as string},
           {src: './assets/img/starships/star_destroyer.jpg' as string},
@@ -167,6 +181,11 @@
     },
 
     methods: {
+
+      hamburgerToggle() {
+        this.isOpenNav = !this.isOpenNav;
+      },
+
       // Поисковик фильма
       filmSearchHandler() {
         if (this.searchFilm === '') {
@@ -203,7 +222,621 @@
       },
 
       // Пагинация
+      actorsNextPage() {
+        if (this.actorsPageNumber < this.actorsMaxPageNumber) {
+          this.actorsPageNumber++;
+        }
+        
+        switch (this.actorsPageNumber) {
+        case 1: this.actorsName = [
+          {actorName: 'Марк Хэмилл'},
+          {actorName: 'Энтони Дэниелс'},
+          {actorName: 'Кенни Бейкер'},
+          {actorName: 'Дэвид Проуз'},
+          {actorName: 'Кэрри Фишер'},
+          {actorName: 'Джоэл Эдгертон'},
+          {actorName: 'Бонни Писз'},
+          {actorName: ''},
+          {actorName: 'Гэррик Хэгон'},
+          {actorName: 'Юэн Макгрегор'},
+        ];
 
+        this.actorsImg = [
+          {src: 'img/actors/mark_hamill.jpg'},
+          {src: 'img/actors/anthony_daniels.jpg'},
+          {src: 'img/actors/kenny_baker.jpg'},
+          {src: 'img/actors/david_prowse.jpg'},
+          {src: 'img/actors/carrie_fisher.jpg'},
+          {src: 'img/actors/joel_edgerton.jpeg'},
+          {src: 'img/actors/bonnie_piesse.jpg'},
+          {src: 'img/actors/r5_d4.jpg'},
+          {src: 'img/actors/garrick_hagon.jpg'},
+          {src: 'img/actors/ewan_mcgregor.jpg'},
+        ];
+        break;
+
+        case 2:
+          this.actorsName = [
+            {actorName: 'Хайден Кристенсен'},
+            {actorName: 'Питер Кушинг'},
+            {actorName: 'Питер Мейхью'},
+            {actorName: 'Харрисон Форд'},
+            {actorName: 'Пол Блейк'},
+            {actorName: 'Дэвид Барклай'},
+            {actorName: 'Колин Хиггинс'},
+            {actorName: 'Уильям Хуткинс'},
+            {actorName: ''},
+            {actorName: 'Иэн Макдёрмид'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/hayden_christensen.jpg'},
+            {src: 'img/actors/peter_cushing.jpg'},
+            {src: 'img/actors/peter_mayhew.jpg'},
+            {src: 'img/actors/harrison_ford.jpg'},
+            {src: 'img/actors/paul_blake.jpg'},
+            {src: 'img/actors/david_barclay.jpg'},
+            {src: 'img/actors/colin_higgins.jpg'},
+            {src: 'img/actors/william_hutkins.jpg'},
+            {src: 'img/actors/yoda.jpg'},
+            {src: 'img/actors/ian_mcDiarmid.jpg'},
+          ];
+          break;
+        case 3:
+          this.actorsName = [
+            {actorName: 'Джереми Буллок'},
+            {actorName: ''},
+            {actorName: 'Аллан Харрис'},
+            {actorName: 'Билли Ди Уильямс'},
+            {actorName: 'Джон Холлис'},
+            {actorName: 'Тимоти Д. Роуз'},
+            {actorName: "Женевьева О'Рейли"},
+            {actorName: 'Хилтон Макрей'},
+            {actorName: ''},
+            {actorName: 'Майк Куинн'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/jeremy_bullock.jpeg'},
+            {src: 'img/actors/ig_88.jpg'},
+            {src: 'img/actors/allan_harris.jpg'},
+            {src: 'img/actors/billy_dee_williams.jpg'},
+            {src: 'img/actors/john_hollis.jpg'},
+            {src: 'img/actors/timothy_d_rose.jpg'},
+            {src: "img/actors/genevieve_o_reilly.jpg"},
+            {src: 'img/actors/hilton_mcrae.jpg'},
+            {src: 'img/actors/wicket_systri_warrick.jpg'},
+            {src: 'img/actors/mike_quinn.jpg'},
+          ];
+          break;
+        case 4:
+          this.actorsName = [
+            {actorName: 'Лиам Нисон'},
+            {actorName: 'Силас Карсон'},
+            {actorName: 'Теренс Стэмп'},
+            {actorName: 'Натали Портман'},
+            {actorName: 'Ахмед Бест'},
+            {actorName: 'Стив Спайрс'},
+            {actorName: 'Брайан Блессед'},
+            {actorName: 'Ральф Браун'},
+            {actorName: 'Эндрю Сиком'},
+            {actorName: 'Льюис Маклауд'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/liam_neeson.jpg'},
+            {src: 'img/actors/silas_carson.jpg'},
+            {src: 'img/actors/terence_stamp.jpg'},
+            {src: 'img/actors/natalie_portman.jpg'},
+            {src: 'img/actors/ahmed_best.jpg'},
+            {src: 'img/actors/steve_speirs.jpg'},
+            {src: 'img/actors/brian_blessed.jpg'},
+            {src: 'img/actors/ralph_brown.jpg'},
+            {src: 'img/actors/andrew_seecom.jpg'},
+            {src: 'img/actors/lewis_macleod.jpg'},
+          ];
+          break;
+        case 5:
+          this.actorsName = [
+            {actorName: 'Хью Куарши'},
+            {actorName: 'Пернилла Аугуст'},
+            {actorName: 'Рэй Парк'},
+            {actorName: 'Мэттью Вуд'},
+            {actorName: 'Дженнифер Хейл'},
+            {actorName: ''},
+            {actorName: ''},
+            {actorName: ''},
+            {actorName: ''},
+            {actorName: 'Сэмюэл Л. Джексон'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/hugh_quarshi.jpg'},
+            {src: 'img/actors/pernilla_august.jpg'},
+            {src: 'img/actors/ray_park.jpg'},
+            {src: 'img/actors/matthew_wood.jpg'},
+            {src: 'img/actors/jennifer_hale.jpg'},
+            {src: 'img/actors/ratts_tyerel.jpg'},
+            {src: 'img/actors/dud_bolt.jpg'},
+            {src: 'img/actors/gasgano.jpg'},
+            {src: 'img/actors/ben_quadinaros.jpg'},
+            {src: 'img/actors/samuel_l_jackson.jpg'},
+          ];
+          break;
+        case 6:
+          this.actorsName = [
+            {actorName: 'Сайлас Карсон'},
+            {actorName: ''},
+            {actorName: 'Хассани Шапи'},
+            {actorName: 'Джин Кларк'},
+            {actorName: 'Хан Бонфилс'},
+            {actorName: 'Мишель Тейлор'},
+            {actorName: 'Алан Раскоу'},
+            {actorName: 'Джером Блейк'},
+            {actorName: ''},
+            {actorName: ''},
+          ];
+  
+          this.actorsImg = [
+            {src: 'img/actors/silas_carson.jpg'},
+            {src: 'img/actors/kit_fisto.jpg'},
+            {src: 'img/actors/hassani_shapi.jpg'},
+            {src: 'img/actors/gin_clarke.jpg'},
+            {src: 'img/actors/khan_bonfils.jpg'},
+            {src: 'img/actors/not_found.jpeg'},
+            {src: 'img/actors/alan_ruscoe.png'},
+            {src: 'img/actors/jerome_blake.jpg'},
+            {src: 'img/actors/gregar_typho.jpg'},
+            {src: 'img/actors/not_found.jpeg'},
+          ];
+          break;
+        case 7:
+          this.actorsName = [
+            {actorName: 'Джек Томпсон'},
+            {actorName: 'Ричард Страйд'},
+            {actorName: 'Фэй Дэвид'},
+            {actorName: 'Налини Кришан'},
+            {actorName: 'Роуз Бирн'},
+            {actorName: 'Кристофер Ли'},
+            {actorName: 'Джимми Смитс'},
+            {actorName: 'Темуера Моррисон'},
+            {actorName: 'Лианна Уолсмен'},
+            {actorName: 'Рон Фальк'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/jack_thompson.jpg'},
+            {src: 'img/actors/richard_stride.jpg'},
+            {src: 'img/actors/fay_david.jpg'},
+            {src: 'img/actors/nalini_krishan.jpg'},
+            {src: 'img/actors/rose_byrne.jpg'},
+            {src: 'img/actors/christopher_lee.jpg'},
+            {src: 'img/actors/jimmy_smits.jpg'},
+            {src: 'img/actors/temuera_morrison.jpg'},
+            {src: 'img/actors/leeanna_walsman.jpg'},
+            {src: 'img/actors/ron_falk.jpg'},
+          ];
+          break;
+        case 8:
+          this.actorsName = [
+            {actorName: 'Энтони Фелан'},
+            {actorName: 'Рина Оуэн'},
+            {actorName: 'Алетеа МакГрат'},
+            {actorName: ''},
+            {actorName: 'Кристофер Трасуэлл'},
+            {actorName: 'Кристофер Трасуэлл'},
+            {actorName: 'Орли Шошан'},
+            {actorName: 'Джон Ди Маджо'},
+            {actorName: 'Майкл Кингма'},
+            {actorName: 'Роэн Николь'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/anthony_phelan.jpg'},
+            {src: 'img/actors/rena_owen.jpg'},
+            {src: 'img/actors/alethea_mcgrath.png'},
+            {src: 'img/actors/r4_p17.jpg'},
+            {src: 'img/actors/christopher_truswell.jpg'},
+            {src: 'img/actors/christopher_truswell.jpg'},
+            {src: 'img/actors/orli_shoshan.jpg'},
+            {src: 'img/actors/john_dimaggio.jpeg'},
+            {src: 'img/actors/michael_kingma.jpg'},
+            {src: 'img/actors/rohan_nichol.jpg'},
+          ];
+          break;
+        case 9:
+          this.actorsName = [
+            {actorName: 'Сэнди Финлэй'},
+            {actorName: 'Брюс Спенс'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/sandi_finlay.jpg'},
+            {src: 'img/actors/bruce_spence.jpg'},
+          ];
+          break;
+        }
+
+        this.actorsData(this.actorsPageNumber);
+      },
+
+      actorsPrevPage() {
+        if (this.actorsPageNumber > 1) {
+          this.actorsPageNumber--;
+        }
+        
+        switch (this.actorsPageNumber) {
+        case 1: this.actorsName = [
+          {actorName: 'Марк Хэмилл'},
+          {actorName: 'Энтони Дэниелс'},
+          {actorName: 'Кенни Бейкер'},
+          {actorName: 'Дэвид Проуз'},
+          {actorName: 'Кэрри Фишер'},
+          {actorName: 'Джоэл Эдгертон'},
+          {actorName: 'Бонни Писз'},
+          {actorName: ''},
+          {actorName: 'Гэррик Хэгон'},
+          {actorName: 'Юэн Макгрегор'},
+        ];
+
+        this.actorsImg = [
+          {src: 'img/actors/mark_hamill.jpg'},
+          {src: 'img/actors/anthony_daniels.jpg'},
+          {src: 'img/actors/kenny_baker.jpg'},
+          {src: 'img/actors/david_prowse.jpg'},
+          {src: 'img/actors/carrie_fisher.jpg'},
+          {src: 'img/actors/joel_edgerton.jpeg'},
+          {src: 'img/actors/bonnie_piesse.jpg'},
+          {src: 'img/actors/r5_d4.jpg'},
+          {src: 'img/actors/garrick_hagon.jpg'},
+          {src: 'img/actors/ewan_mcgregor.jpg'},
+        ];
+        break;
+
+        case 2:
+          this.actorsName = [
+            {actorName: 'Хайден Кристенсен'},
+            {actorName: 'Питер Кушинг'},
+            {actorName: 'Питер Мейхью'},
+            {actorName: 'Харрисон Форд'},
+            {actorName: 'Пол Блейк'},
+            {actorName: 'Дэвид Барклай'},
+            {actorName: 'Колин Хиггинс'},
+            {actorName: 'Уильям Хуткинс'},
+            {actorName: ''},
+            {actorName: 'Иэн Макдёрмид'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/hayden_christensen.jpg'},
+            {src: 'img/actors/peter_cushing.jpg'},
+            {src: 'img/actors/peter_mayhew.jpg'},
+            {src: 'img/actors/harrison_ford.jpg'},
+            {src: 'img/actors/paul_blake.jpg'},
+            {src: 'img/actors/david_barclay.jpg'},
+            {src: 'img/actors/colin_higgins.jpg'},
+            {src: 'img/actors/william_hutkins.jpg'},
+            {src: 'img/actors/yoda.jpg'},
+            {src: 'img/actors/ian_mcDiarmid.jpg'},
+          ];
+          break;
+        case 3:
+          this.actorsName = [
+            {actorName: 'Джереми Буллок'},
+            {actorName: ''},
+            {actorName: 'Аллан Харрис'},
+            {actorName: 'Билли Ди Уильямс'},
+            {actorName: 'Джон Холлис'},
+            {actorName: 'Тимоти Д. Роуз'},
+            {actorName: "Женевьева О'Рейли"},
+            {actorName: 'Хилтон Макрей'},
+            {actorName: ''},
+            {actorName: 'Майк Куинн'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/jeremy_bullock.jpeg'},
+            {src: 'img/actors/ig_88.jpg'},
+            {src: 'img/actors/allan_harris.jpg'},
+            {src: 'img/actors/billy_dee_williams.jpg'},
+            {src: 'img/actors/john_hollis.jpg'},
+            {src: 'img/actors/timothy_d_rose.jpg'},
+            {src: "img/actors/genevieve_o_reilly.jpg"},
+            {src: 'img/actors/hilton_mcrae.jpg'},
+            {src: 'img/actors/wicket_systri_warrick.jpg'},
+            {src: 'img/actors/mike_quinn.jpg'},
+          ];
+          break;
+        case 4:
+          this.actorsName = [
+            {actorName: 'Лиам Нисон'},
+            {actorName: 'Силас Карсон'},
+            {actorName: 'Теренс Стэмп'},
+            {actorName: 'Натали Портман'},
+            {actorName: 'Ахмед Бест'},
+            {actorName: 'Стив Спайрс'},
+            {actorName: 'Брайан Блессед'},
+            {actorName: 'Ральф Браун'},
+            {actorName: 'Эндрю Сиком'},
+            {actorName: 'Льюис Маклауд'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/liam_neeson.jpg'},
+            {src: 'img/actors/silas_carson.jpg'},
+            {src: 'img/actors/terence_stamp.jpg'},
+            {src: 'img/actors/natalie_portman.jpg'},
+            {src: 'img/actors/ahmed_best.jpg'},
+            {src: 'img/actors/steve_speirs.jpg'},
+            {src: 'img/actors/brian_blessed.jpg'},
+            {src: 'img/actors/ralph_brown.jpg'},
+            {src: 'img/actors/andrew_seecom.jpg'},
+            {src: 'img/actors/lewis_macleod.jpg'},
+          ];
+          break;
+        case 5:
+          this.actorsName = [
+            {actorName: 'Хью Куарши'},
+            {actorName: 'Пернилла Аугуст'},
+            {actorName: 'Рэй Парк'},
+            {actorName: 'Мэттью Вуд'},
+            {actorName: 'Дженнифер Хейл'},
+            {actorName: ''},
+            {actorName: ''},
+            {actorName: ''},
+            {actorName: ''},
+            {actorName: 'Сэмюэл Л. Джексон'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/hugh_quarshi.jpg'},
+            {src: 'img/actors/pernilla_august.jpg'},
+            {src: 'img/actors/ray_park.jpg'},
+            {src: 'img/actors/matthew_wood.jpg'},
+            {src: 'img/actors/jennifer_hale.jpg'},
+            {src: 'img/actors/ratts_tyerel.jpg'},
+            {src: 'img/actors/dud_bolt.jpg'},
+            {src: 'img/actors/gasgano.jpg'},
+            {src: 'img/actors/ben_quadinaros.jpg'},
+            {src: 'img/actors/samuel_l_jackson.jpg'},
+          ];
+          break;
+        case 6:
+          this.actorsName = [
+            {actorName: 'Сайлас Карсон'},
+            {actorName: ''},
+            {actorName: 'Хассани Шапи'},
+            {actorName: 'Джин Кларк'},
+            {actorName: 'Хан Бонфилс'},
+            {actorName: 'Мишель Тейлор'},
+            {actorName: 'Алан Раскоу'},
+            {actorName: 'Джером Блейк'},
+            {actorName: ''},
+            {actorName: ''},
+          ];
+  
+          this.actorsImg = [
+            {src: 'img/actors/silas_carson.jpg'},
+            {src: 'img/actors/kit_fisto.jpg'},
+            {src: 'img/actors/hassani_shapi.jpg'},
+            {src: 'img/actors/gin_clarke.jpg'},
+            {src: 'img/actors/khan_bonfils.jpg'},
+            {src: 'img/actors/not_found.jpeg'},
+            {src: 'img/actors/alan_ruscoe.png'},
+            {src: 'img/actors/jerome_blake.jpg'},
+            {src: 'img/actors/gregar_typho.jpg'},
+            {src: 'img/actors/not_found.jpeg'},
+          ];
+          break;
+        case 7:
+          this.actorsName = [
+            {actorName: 'Джек Томпсон'},
+            {actorName: 'Ричард Страйд'},
+            {actorName: 'Фэй Дэвид'},
+            {actorName: 'Налини Кришан'},
+            {actorName: 'Роуз Бирн'},
+            {actorName: 'Кристофер Ли'},
+            {actorName: 'Джимми Смитс'},
+            {actorName: 'Темуера Моррисон'},
+            {actorName: 'Лианна Уолсмен'},
+            {actorName: 'Рон Фальк'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/jack_thompson.jpg'},
+            {src: 'img/actors/richard_stride.jpg'},
+            {src: 'img/actors/fay_david.jpg'},
+            {src: 'img/actors/nalini_krishan.jpg'},
+            {src: 'img/actors/rose_byrne.jpg'},
+            {src: 'img/actors/christopher_lee.jpg'},
+            {src: 'img/actors/jimmy_smits.jpg'},
+            {src: 'img/actors/temuera_morrison.jpg'},
+            {src: 'img/actors/leeanna_walsman.jpg'},
+            {src: 'img/actors/ron_falk.jpg'},
+          ];
+          break;
+        case 8:
+          this.actorsName = [
+            {actorName: 'Энтони Фелан'},
+            {actorName: 'Рина Оуэн'},
+            {actorName: 'Алетеа МакГрат'},
+            {actorName: ''},
+            {actorName: 'Кристофер Трасуэлл'},
+            {actorName: 'Кристофер Трасуэлл'},
+            {actorName: 'Орли Шошан'},
+            {actorName: 'Джон Ди Маджо'},
+            {actorName: 'Майкл Кингма'},
+            {actorName: 'Роэн Николь'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/anthony_phelan.jpg'},
+            {src: 'img/actors/rena_owen.jpg'},
+            {src: 'img/actors/alethea_mcgrath.png'},
+            {src: 'img/actors/r4_p17.jpg'},
+            {src: 'img/actors/christopher_truswell.jpg'},
+            {src: 'img/actors/christopher_truswell.jpg'},
+            {src: 'img/actors/orli_shoshan.jpg'},
+            {src: 'img/actors/john_dimaggio.jpeg'},
+            {src: 'img/actors/michael_kingma.jpg'},
+            {src: 'img/actors/rohan_nichol.jpg'},
+          ];
+          break;
+        case 9:
+          this.actorsName = [
+            {actorName: 'Сэнди Финлэй'},
+            {actorName: 'Брюс Спенс'},
+          ];
+  
+          
+          this.actorsImg = [
+            {src: 'img/actors/sandi_finlay.jpg'},
+            {src: 'img/actors/bruce_spence.jpg'},
+          ];
+          break;
+        }
+
+        this.actorsData(this.actorsPageNumber);
+      },
+
+      starshipsNextPage(){
+        if (this.starshipsPageNumber < this.starshipsMaxPageNumber) {
+          this.starshipsPageNumber++;
+        }
+
+        switch(this.starshipsPageNumber) {
+          case 1:
+            this.starshipsImg = [
+              {src: 'img/starships/cr90_corvette.jpg'},
+              {src: 'img/starships/star_destroyer.jpg'},
+              {src: 'img/starships/sentinel_class_landing_craft.jpg'},
+              {src: 'img/starships/death_star.jpg'},
+              {src: 'img/starships/millennium_falcon.jpg'},
+              {src: 'img/starships/y_wing.jpg'},
+              {src: 'img/starships/x_wing.jpg'},
+              {src: 'img/starships/tie_advanced_x1.png'},
+              {src: 'img/starships/executor.png'},
+              {src: 'img/starships/rebel_transport.jpg'},
+            ];
+            break;
+          case 2:
+            this.starshipsImg = [
+              {src: 'img/starships/slave_1.jpg'},
+              {src: 'img/starships/imperial_shuttle.jpg'},
+              {src: 'img/starships/ef76_nebulon_b_escort_frigate.png'},
+              {src: 'img/starships/calamari_cruiser.jpg'},
+              {src: 'img/starships/a_wing.jpg'},
+              {src: 'img/starships/b_wing.jpg'},
+              {src: 'img/starships/republic_cruiser.jpg'},
+              {src: 'img/starships/droid_control_ship.jpg'},
+              {src: 'img/starships/naboo_fighter.jpg'},
+              {src: 'img/starships/naboo_royal_starship.jpg'},
+            ];
+            break;
+          case 3:
+            this.starshipsImg = [
+              {src: 'img/starships/scimitar.jpg'},
+              {src: 'img/starships/j_type_diplomatic_barge.jpg'},
+              {src: 'img/starships/aa_9_coruscant_freighter.JPG'},
+              {src: 'img/starships/jedi_starfighter.jpg'},
+              {src: 'img/starships/h_type_nubian_yacht.jpeg'},
+              {src: 'img/starships/republic_assault_ship.jpeg'},
+              {src: "img/starships/solar_sailer.jpg"},
+              {src: 'img/starships/trade_federation_cruiser.jpg'},
+              {src: 'img/starships/theta_class_t_2c_shuttle.jpg'},
+              {src: 'img/starships/republic_attack_cruiser.jpg'},
+            ];
+            break;
+          case 4:
+            this.starshipsImg = [
+              {src: 'img/starships/naboo_star_skiff.jpg'},
+              {src: 'img/starships/jedi_interceptor.jpg'},
+              {src: 'img/starships/arc_170.jpg'},
+              {src: 'img/starships/banking_clan_frigte.jpg'},
+              {src: 'img/starships/belbullab_22_starfighter.jpg'},
+              {src: 'img/starships/v_wing.jpg'},
+            ];
+            break;
+        }
+
+        this.starshipsData(this.starshipsPageNumber);
+      },
+
+      starshipsPrevPage(){
+        if (this.starshipsPageNumber > 1) {
+          this.starshipsPageNumber--;
+        }
+
+        switch(this.starshipsPageNumber) {
+          case 1:
+            this.starshipsImg = [
+              {src: 'img/starships/cr90_corvette.jpg'},
+              {src: 'img/starships/star_destroyer.jpg'},
+              {src: 'img/starships/sentinel_class_landing_craft.jpg'},
+              {src: 'img/starships/death_star.jpg'},
+              {src: 'img/starships/millennium_falcon.jpg'},
+              {src: 'img/starships/y_wing.jpg'},
+              {src: 'img/starships/x_wing.jpg'},
+              {src: 'img/starships/tie_advanced_x1.png'},
+              {src: 'img/starships/executor.png'},
+              {src: 'img/starships/rebel_transport.jpg'},
+            ];
+            break;
+          case 2:
+            this.starshipsImg = [
+              {src: 'img/starships/slave_1.jpg'},
+              {src: 'img/starships/imperial_shuttle.jpg'},
+              {src: 'img/starships/ef76_nebulon_b_escort_frigate.png'},
+              {src: 'img/starships/calamari_cruiser.jpg'},
+              {src: 'img/starships/a_wing.jpg'},
+              {src: 'img/starships/b_wing.jpg'},
+              {src: 'img/starships/republic_cruiser.jpg'},
+              {src: 'img/starships/droid_control_ship.jpg'},
+              {src: 'img/starships/naboo_fighter.jpg'},
+              {src: 'img/starships/naboo_royal_starship.jpg'},
+            ];
+            break;
+          case 3:
+            this.starshipsImg = [
+              {src: 'img/starships/scimitar.jpg'},
+              {src: 'img/starships/j_type_diplomatic_barge.jpg'},
+              {src: 'img/starships/aa_9_coruscant_freighter.JPG'},
+              {src: 'img/starships/jedi_starfighter.jpg'},
+              {src: 'img/starships/h_type_nubian_yacht.jpeg'},
+              {src: 'img/starships/republic_assault_ship.jpeg'},
+              {src: "img/starships/solar_sailer.jpg"},
+              {src: 'img/starships/trade_federation_cruiser.jpg'},
+              {src: 'img/starships/theta_class_t_2c_shuttle.jpg'},
+              {src: 'img/starships/republic_attack_cruiser.jpg'},
+            ];
+            break;
+          case 4:
+            this.starshipsImg = [
+              {src: 'img/starships/naboo_star_skiff.jpg'},
+              {src: 'img/starships/jedi_interceptor.jpg'},
+              {src: 'img/starships/arc_170.jpg'},
+              {src: 'img/starships/banking_clan_frigte.jpg'},
+              {src: 'img/starships/belbullab_22_starfighter.jpg'},
+              {src: 'img/starships/v_wing.jpg'},
+            ];
+            break;
+        }
+
+        this.starshipsData(this.starshipsPageNumber);
+      },
 
       // GET запросы
       filmsData() {
@@ -249,6 +882,8 @@
           this.actors = response.data.results;
           this.filteredActors = response.data.results;
 
+          this.actorsMaxPageNumber = Math.round(response.data.count/10)+1;
+
           return response.data.results;
         });
       },
@@ -262,6 +897,8 @@
 
           this.starships = response.data.results;
           this.filteredStarships = response.data.results;
+
+          this.starshipsMaxPageNumber = Math.round(response.data.count/10);
 
           return response.data.results;
         });
