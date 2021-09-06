@@ -143,16 +143,16 @@
           {actorName: 'Юэн Макгрегор' as string},
         ],
         actorsImg: [
-          {src: './assets/img/actors/mark_hamill.jpg' as string},
-          {src: './assets/img/actors/anthony_daniels.jpg' as string},
-          {src: './assets/img/actors/kenny_baker.jpg' as string},
-          {src: './assets/img/actors/david_prowse.jpg' as string},
-          {src: './assets/img/actors/carrie_fisher.jpg' as string},
-          {src: './assets/img/actors/joel_edgerton.jpeg' as string},
-          {src: './assets/img/actors/bonnie_piesse.jpg' as string},
-          {src: './assets/img/actors/r5_d4.jpg' as string},
-          {src: './assets/img/actors/garrick_hagon.jpg' as string},
-          {src: './assets/img/actors/ewan_mcgregor.jpg' as string},
+          {src: '/actors/mark_hamill.jpg' as string},
+          {src: '/actors/anthony_daniels.jpg' as string},
+          {src: '/actors/kenny_baker.jpg' as string},
+          {src: '/actors/david_prowse.jpg' as string},
+          {src: '/actors/carrie_fisher.jpg' as string},
+          {src: '/actors/joel_edgerton.jpeg' as string},
+          {src: '/actors/bonnie_piesse.jpg' as string},
+          {src: '/actors/r5_d4.jpg' as string},
+          {src: '/actors/garrick_hagon.jpg' as string},
+          {src: '/actors/ewan_mcgregor.jpg' as string},
         ],
         
         // Переменные категории Starships
@@ -161,16 +161,16 @@
         starshipsPageNumber: 1 as number,
         starshipsMaxPageNumber: 1 as number,
         starshipsImg: [
-          {src: './assets/img/starships/cr90_corvette.jpg' as string},
-          {src: './assets/img/starships/star_destroyer.jpg' as string},
-          {src: './assets/img/starships/sentinel_class_landing_craft.jpg' as string},
-          {src: './assets/img/starships/death_star.jpg' as string},
-          {src: './assets/img/starships/millennium_falcon.jpg' as string},
-          {src: './assets/img/starships/y_wing.jpg' as string},
-          {src: './assets/img/starships/x_wing.jpg' as string},
-          {src: './assets/img/starships/tie_advanced_x1.png' as string},
-          {src: './assets/img/starships/executor.png' as string},
-          {src: './assets/img/starships/rebel_transport.jpg' as string},
+          {src: '/starships/cr90_corvette.jpg' as string},
+          {src: '/starships/star_destroyer.jpg' as string},
+          {src: '/starships/sentinel_class_landing_craft.jpg' as string},
+          {src: '/starships/death_star.jpg' as string},
+          {src: '/starships/millennium_falcon.jpg' as string},
+          {src: '/starships/y_wing.jpg' as string},
+          {src: '/starships/x_wing.jpg' as string},
+          {src: '/starships/tie_advanced_x1.png' as string},
+          {src: '/starships/executor.png' as string},
+          {src: '/starships/rebel_transport.jpg' as string},
         ],
 
         // Переменные поисковиков
@@ -242,16 +242,16 @@
         ];
 
         this.actorsImg = [
-          {src: 'img/actors/mark_hamill.jpg'},
-          {src: 'img/actors/anthony_daniels.jpg'},
-          {src: 'img/actors/kenny_baker.jpg'},
-          {src: 'img/actors/david_prowse.jpg'},
-          {src: 'img/actors/carrie_fisher.jpg'},
-          {src: 'img/actors/joel_edgerton.jpeg'},
-          {src: 'img/actors/bonnie_piesse.jpg'},
-          {src: 'img/actors/r5_d4.jpg'},
-          {src: 'img/actors/garrick_hagon.jpg'},
-          {src: 'img/actors/ewan_mcgregor.jpg'},
+          {src: '/actors/mark_hamill.jpg'},
+          {src: '/actors/anthony_daniels.jpg'},
+          {src: '/actors/kenny_baker.jpg'},
+          {src: '/actors/david_prowse.jpg'},
+          {src: '/actors/carrie_fisher.jpg'},
+          {src: '/actors/joel_edgerton.jpeg'},
+          {src: '/actors/bonnie_piesse.jpg'},
+          {src: '/actors/r5_d4.jpg'},
+          {src: '/actors/garrick_hagon.jpg'},
+          {src: '/actors/ewan_mcgregor.jpg'},
         ];
         break;
 
@@ -269,18 +269,17 @@
             {actorName: 'Иэн Макдёрмид'},
           ];
   
-          
           this.actorsImg = [
-            {src: 'img/actors/hayden_christensen.jpg'},
-            {src: 'img/actors/peter_cushing.jpg'},
-            {src: 'img/actors/peter_mayhew.jpg'},
-            {src: 'img/actors/harrison_ford.jpg'},
-            {src: 'img/actors/paul_blake.jpg'},
-            {src: 'img/actors/david_barclay.jpg'},
-            {src: 'img/actors/colin_higgins.jpg'},
-            {src: 'img/actors/william_hutkins.jpg'},
-            {src: 'img/actors/yoda.jpg'},
-            {src: 'img/actors/ian_mcDiarmid.jpg'},
+            {src: '/actors/hayden_christensen.jpg'},
+            {src: '/actors/peter_cushing.jpg'},
+            {src: '/actors/peter_mayhew.jpg'},
+            {src: '/actors/harrison_ford.jpg'},
+            {src: '/actors/paul_blake.jpg'},
+            {src: '/actors/david_barclay.jpg'},
+            {src: '/actors/colin_higgins.jpg'},
+            {src: '/actors/william_hutkins.jpg'},
+            {src: '/actors/yoda.jpg'},
+            {src: '/actors/ian_mcDiarmid.jpg'},
           ];
           break;
         case 3:
@@ -297,18 +296,17 @@
             {actorName: 'Майк Куинн'},
           ];
   
-          
           this.actorsImg = [
-            {src: 'img/actors/jeremy_bullock.jpeg'},
-            {src: 'img/actors/ig_88.jpg'},
-            {src: 'img/actors/allan_harris.jpg'},
-            {src: 'img/actors/billy_dee_williams.jpg'},
-            {src: 'img/actors/john_hollis.jpg'},
-            {src: 'img/actors/timothy_d_rose.jpg'},
-            {src: "img/actors/genevieve_o_reilly.jpg"},
-            {src: 'img/actors/hilton_mcrae.jpg'},
-            {src: 'img/actors/wicket_systri_warrick.jpg'},
-            {src: 'img/actors/mike_quinn.jpg'},
+            {src: '/actors/jeremy_bullock.jpeg'},
+            {src: '/actors/ig_88.jpg'},
+            {src: '/actors/allan_harris.jpg'},
+            {src: '/actors/billy_dee_williams.jpg'},
+            {src: '/actors/john_hollis.jpg'},
+            {src: '/actors/timothy_d_rose.jpg'},
+            {src: "/actors/genevieve_o_reilly.jpg"},
+            {src: '/actors/hilton_mcrae.jpg'},
+            {src: '/actors/wicket_systri_warrick.jpg'},
+            {src: '/actors/mike_quinn.jpg'},
           ];
           break;
         case 4:
@@ -325,18 +323,17 @@
             {actorName: 'Льюис Маклауд'},
           ];
   
-          
           this.actorsImg = [
-            {src: 'img/actors/liam_neeson.jpg'},
-            {src: 'img/actors/silas_carson.jpg'},
-            {src: 'img/actors/terence_stamp.jpg'},
-            {src: 'img/actors/natalie_portman.jpg'},
-            {src: 'img/actors/ahmed_best.jpg'},
-            {src: 'img/actors/steve_speirs.jpg'},
-            {src: 'img/actors/brian_blessed.jpg'},
-            {src: 'img/actors/ralph_brown.jpg'},
-            {src: 'img/actors/andrew_seecom.jpg'},
-            {src: 'img/actors/lewis_macleod.jpg'},
+            {src: '/actors/liam_neeson.jpg'},
+            {src: '/actors/silas_carson.jpg'},
+            {src: '/actors/terence_stamp.jpg'},
+            {src: '/actors/natalie_portman.jpg'},
+            {src: '/actors/ahmed_best.jpg'},
+            {src: '/actors/steve_speirs.jpg'},
+            {src: '/actors/brian_blessed.jpg'},
+            {src: '/actors/ralph_brown.jpg'},
+            {src: '/actors/andrew_seecom.jpg'},
+            {src: '/actors/lewis_macleod.jpg'},
           ];
           break;
         case 5:
@@ -353,18 +350,17 @@
             {actorName: 'Сэмюэл Л. Джексон'},
           ];
   
-          
           this.actorsImg = [
-            {src: 'img/actors/hugh_quarshi.jpg'},
-            {src: 'img/actors/pernilla_august.jpg'},
-            {src: 'img/actors/ray_park.jpg'},
-            {src: 'img/actors/matthew_wood.jpg'},
-            {src: 'img/actors/jennifer_hale.jpg'},
-            {src: 'img/actors/ratts_tyerel.jpg'},
-            {src: 'img/actors/dud_bolt.jpg'},
-            {src: 'img/actors/gasgano.jpg'},
-            {src: 'img/actors/ben_quadinaros.jpg'},
-            {src: 'img/actors/samuel_l_jackson.jpg'},
+            {src: '/actors/hugh_quarshi.jpg'},
+            {src: '/actors/pernilla_august.jpg'},
+            {src: '/actors/ray_park.jpg'},
+            {src: '/actors/matthew_wood.jpg'},
+            {src: '/actors/jennifer_hale.jpg'},
+            {src: '/actors/ratts_tyerel.jpg'},
+            {src: '/actors/dud_bolt.jpg'},
+            {src: '/actors/gasgano.jpg'},
+            {src: '/actors/ben_quadinaros.jpg'},
+            {src: '/actors/samuel_l_jackson.jpg'},
           ];
           break;
         case 6:
@@ -382,16 +378,16 @@
           ];
   
           this.actorsImg = [
-            {src: 'img/actors/silas_carson.jpg'},
-            {src: 'img/actors/kit_fisto.jpg'},
-            {src: 'img/actors/hassani_shapi.jpg'},
-            {src: 'img/actors/gin_clarke.jpg'},
-            {src: 'img/actors/khan_bonfils.jpg'},
-            {src: 'img/actors/not_found.jpeg'},
-            {src: 'img/actors/alan_ruscoe.png'},
-            {src: 'img/actors/jerome_blake.jpg'},
-            {src: 'img/actors/gregar_typho.jpg'},
-            {src: 'img/actors/not_found.jpeg'},
+            {src: '/actors/silas_carson.jpg'},
+            {src: '/actors/kit_fisto.jpg'},
+            {src: '/actors/hassani_shapi.jpg'},
+            {src: '/actors/gin_clarke.jpg'},
+            {src: '/actors/khan_bonfils.jpg'},
+            {src: '/actors/not_found.jpeg'},
+            {src: '/actors/alan_ruscoe.png'},
+            {src: '/actors/jerome_blake.jpg'},
+            {src: '/actors/gregar_typho.jpg'},
+            {src: '/actors/not_found.jpeg'},
           ];
           break;
         case 7:
@@ -408,18 +404,17 @@
             {actorName: 'Рон Фальк'},
           ];
   
-          
           this.actorsImg = [
-            {src: 'img/actors/jack_thompson.jpg'},
-            {src: 'img/actors/richard_stride.jpg'},
-            {src: 'img/actors/fay_david.jpg'},
-            {src: 'img/actors/nalini_krishan.jpg'},
-            {src: 'img/actors/rose_byrne.jpg'},
-            {src: 'img/actors/christopher_lee.jpg'},
-            {src: 'img/actors/jimmy_smits.jpg'},
-            {src: 'img/actors/temuera_morrison.jpg'},
-            {src: 'img/actors/leeanna_walsman.jpg'},
-            {src: 'img/actors/ron_falk.jpg'},
+            {src: '/actors/jack_thompson.jpg'},
+            {src: '/actors/richard_stride.jpg'},
+            {src: '/actors/fay_david.jpg'},
+            {src: '/actors/nalini_krishan.jpg'},
+            {src: '/actors/rose_byrne.jpg'},
+            {src: '/actors/christopher_lee.jpg'},
+            {src: '/actors/jimmy_smits.jpg'},
+            {src: '/actors/temuera_morrison.jpg'},
+            {src: '/actors/leeanna_walsman.jpg'},
+            {src: '/actors/ron_falk.jpg'},
           ];
           break;
         case 8:
@@ -436,18 +431,17 @@
             {actorName: 'Роэн Николь'},
           ];
   
-          
           this.actorsImg = [
-            {src: 'img/actors/anthony_phelan.jpg'},
-            {src: 'img/actors/rena_owen.jpg'},
-            {src: 'img/actors/alethea_mcgrath.png'},
-            {src: 'img/actors/r4_p17.jpg'},
-            {src: 'img/actors/christopher_truswell.jpg'},
-            {src: 'img/actors/christopher_truswell.jpg'},
-            {src: 'img/actors/orli_shoshan.jpg'},
-            {src: 'img/actors/john_dimaggio.jpeg'},
-            {src: 'img/actors/michael_kingma.jpg'},
-            {src: 'img/actors/rohan_nichol.jpg'},
+            {src: '/actors/anthony_phelan.jpg'},
+            {src: '/actors/rena_owen.jpg'},
+            {src: '/actors/alethea_mcgrath.png'},
+            {src: '/actors/r4_p17.jpg'},
+            {src: '/actors/christopher_truswell.jpg'},
+            {src: '/actors/christopher_truswell.jpg'},
+            {src: '/actors/orli_shoshan.jpg'},
+            {src: '/actors/john_dimaggio.jpeg'},
+            {src: '/actors/michael_kingma.jpg'},
+            {src: '/actors/rohan_nichol.jpg'},
           ];
           break;
         case 9:
@@ -456,10 +450,9 @@
             {actorName: 'Брюс Спенс'},
           ];
   
-          
           this.actorsImg = [
-            {src: 'img/actors/sandi_finlay.jpg'},
-            {src: 'img/actors/bruce_spence.jpg'},
+            {src: '/actors/sandi_finlay.jpg'},
+            {src: '/actors/bruce_spence.jpg'},
           ];
           break;
         }
@@ -487,16 +480,16 @@
         ];
 
         this.actorsImg = [
-          {src: 'img/actors/mark_hamill.jpg'},
-          {src: 'img/actors/anthony_daniels.jpg'},
-          {src: 'img/actors/kenny_baker.jpg'},
-          {src: 'img/actors/david_prowse.jpg'},
-          {src: 'img/actors/carrie_fisher.jpg'},
-          {src: 'img/actors/joel_edgerton.jpeg'},
-          {src: 'img/actors/bonnie_piesse.jpg'},
-          {src: 'img/actors/r5_d4.jpg'},
-          {src: 'img/actors/garrick_hagon.jpg'},
-          {src: 'img/actors/ewan_mcgregor.jpg'},
+          {src: '/actors/mark_hamill.jpg'},
+          {src: '/actors/anthony_daniels.jpg'},
+          {src: '/actors/kenny_baker.jpg'},
+          {src: '/actors/david_prowse.jpg'},
+          {src: '/actors/carrie_fisher.jpg'},
+          {src: '/actors/joel_edgerton.jpeg'},
+          {src: '/actors/bonnie_piesse.jpg'},
+          {src: '/actors/r5_d4.jpg'},
+          {src: '/actors/garrick_hagon.jpg'},
+          {src: '/actors/ewan_mcgregor.jpg'},
         ];
         break;
 
@@ -516,16 +509,16 @@
   
           
           this.actorsImg = [
-            {src: 'img/actors/hayden_christensen.jpg'},
-            {src: 'img/actors/peter_cushing.jpg'},
-            {src: 'img/actors/peter_mayhew.jpg'},
-            {src: 'img/actors/harrison_ford.jpg'},
-            {src: 'img/actors/paul_blake.jpg'},
-            {src: 'img/actors/david_barclay.jpg'},
-            {src: 'img/actors/colin_higgins.jpg'},
-            {src: 'img/actors/william_hutkins.jpg'},
-            {src: 'img/actors/yoda.jpg'},
-            {src: 'img/actors/ian_mcDiarmid.jpg'},
+            {src: '/actors/hayden_christensen.jpg'},
+            {src: '/actors/peter_cushing.jpg'},
+            {src: '/actors/peter_mayhew.jpg'},
+            {src: '/actors/harrison_ford.jpg'},
+            {src: '/actors/paul_blake.jpg'},
+            {src: '/actors/david_barclay.jpg'},
+            {src: '/actors/colin_higgins.jpg'},
+            {src: '/actors/william_hutkins.jpg'},
+            {src: '/actors/yoda.jpg'},
+            {src: '/actors/ian_mcDiarmid.jpg'},
           ];
           break;
         case 3:
@@ -544,16 +537,16 @@
   
           
           this.actorsImg = [
-            {src: 'img/actors/jeremy_bullock.jpeg'},
-            {src: 'img/actors/ig_88.jpg'},
-            {src: 'img/actors/allan_harris.jpg'},
-            {src: 'img/actors/billy_dee_williams.jpg'},
-            {src: 'img/actors/john_hollis.jpg'},
-            {src: 'img/actors/timothy_d_rose.jpg'},
-            {src: "img/actors/genevieve_o_reilly.jpg"},
-            {src: 'img/actors/hilton_mcrae.jpg'},
-            {src: 'img/actors/wicket_systri_warrick.jpg'},
-            {src: 'img/actors/mike_quinn.jpg'},
+            {src: '/actors/jeremy_bullock.jpeg'},
+            {src: '/actors/ig_88.jpg'},
+            {src: '/actors/allan_harris.jpg'},
+            {src: '/actors/billy_dee_williams.jpg'},
+            {src: '/actors/john_hollis.jpg'},
+            {src: '/actors/timothy_d_rose.jpg'},
+            {src: "/actors/genevieve_o_reilly.jpg"},
+            {src: '/actors/hilton_mcrae.jpg'},
+            {src: '/actors/wicket_systri_warrick.jpg'},
+            {src: '/actors/mike_quinn.jpg'},
           ];
           break;
         case 4:
@@ -572,16 +565,16 @@
   
           
           this.actorsImg = [
-            {src: 'img/actors/liam_neeson.jpg'},
-            {src: 'img/actors/silas_carson.jpg'},
-            {src: 'img/actors/terence_stamp.jpg'},
-            {src: 'img/actors/natalie_portman.jpg'},
-            {src: 'img/actors/ahmed_best.jpg'},
-            {src: 'img/actors/steve_speirs.jpg'},
-            {src: 'img/actors/brian_blessed.jpg'},
-            {src: 'img/actors/ralph_brown.jpg'},
-            {src: 'img/actors/andrew_seecom.jpg'},
-            {src: 'img/actors/lewis_macleod.jpg'},
+            {src: '/actors/liam_neeson.jpg'},
+            {src: '/actors/silas_carson.jpg'},
+            {src: '/actors/terence_stamp.jpg'},
+            {src: '/actors/natalie_portman.jpg'},
+            {src: '/actors/ahmed_best.jpg'},
+            {src: '/actors/steve_speirs.jpg'},
+            {src: '/actors/brian_blessed.jpg'},
+            {src: '/actors/ralph_brown.jpg'},
+            {src: '/actors/andrew_seecom.jpg'},
+            {src: '/actors/lewis_macleod.jpg'},
           ];
           break;
         case 5:
@@ -600,16 +593,16 @@
   
           
           this.actorsImg = [
-            {src: 'img/actors/hugh_quarshi.jpg'},
-            {src: 'img/actors/pernilla_august.jpg'},
-            {src: 'img/actors/ray_park.jpg'},
-            {src: 'img/actors/matthew_wood.jpg'},
-            {src: 'img/actors/jennifer_hale.jpg'},
-            {src: 'img/actors/ratts_tyerel.jpg'},
-            {src: 'img/actors/dud_bolt.jpg'},
-            {src: 'img/actors/gasgano.jpg'},
-            {src: 'img/actors/ben_quadinaros.jpg'},
-            {src: 'img/actors/samuel_l_jackson.jpg'},
+            {src: '/actors/hugh_quarshi.jpg'},
+            {src: '/actors/pernilla_august.jpg'},
+            {src: '/actors/ray_park.jpg'},
+            {src: '/actors/matthew_wood.jpg'},
+            {src: '/actors/jennifer_hale.jpg'},
+            {src: '/actors/ratts_tyerel.jpg'},
+            {src: '/actors/dud_bolt.jpg'},
+            {src: '/actors/gasgano.jpg'},
+            {src: '/actors/ben_quadinaros.jpg'},
+            {src: '/actors/samuel_l_jackson.jpg'},
           ];
           break;
         case 6:
@@ -627,16 +620,16 @@
           ];
   
           this.actorsImg = [
-            {src: 'img/actors/silas_carson.jpg'},
-            {src: 'img/actors/kit_fisto.jpg'},
-            {src: 'img/actors/hassani_shapi.jpg'},
-            {src: 'img/actors/gin_clarke.jpg'},
-            {src: 'img/actors/khan_bonfils.jpg'},
-            {src: 'img/actors/not_found.jpeg'},
-            {src: 'img/actors/alan_ruscoe.png'},
-            {src: 'img/actors/jerome_blake.jpg'},
-            {src: 'img/actors/gregar_typho.jpg'},
-            {src: 'img/actors/not_found.jpeg'},
+            {src: '/actors/silas_carson.jpg'},
+            {src: '/actors/kit_fisto.jpg'},
+            {src: '/actors/hassani_shapi.jpg'},
+            {src: '/actors/gin_clarke.jpg'},
+            {src: '/actors/khan_bonfils.jpg'},
+            {src: '/actors/not_found.jpeg'},
+            {src: '/actors/alan_ruscoe.png'},
+            {src: '/actors/jerome_blake.jpg'},
+            {src: '/actors/gregar_typho.jpg'},
+            {src: '/actors/not_found.jpeg'},
           ];
           break;
         case 7:
@@ -655,16 +648,16 @@
   
           
           this.actorsImg = [
-            {src: 'img/actors/jack_thompson.jpg'},
-            {src: 'img/actors/richard_stride.jpg'},
-            {src: 'img/actors/fay_david.jpg'},
-            {src: 'img/actors/nalini_krishan.jpg'},
-            {src: 'img/actors/rose_byrne.jpg'},
-            {src: 'img/actors/christopher_lee.jpg'},
-            {src: 'img/actors/jimmy_smits.jpg'},
-            {src: 'img/actors/temuera_morrison.jpg'},
-            {src: 'img/actors/leeanna_walsman.jpg'},
-            {src: 'img/actors/ron_falk.jpg'},
+            {src: '/actors/jack_thompson.jpg'},
+            {src: '/actors/richard_stride.jpg'},
+            {src: '/actors/fay_david.jpg'},
+            {src: '/actors/nalini_krishan.jpg'},
+            {src: '/actors/rose_byrne.jpg'},
+            {src: '/actors/christopher_lee.jpg'},
+            {src: '/actors/jimmy_smits.jpg'},
+            {src: '/actors/temuera_morrison.jpg'},
+            {src: '/actors/leeanna_walsman.jpg'},
+            {src: '/actors/ron_falk.jpg'},
           ];
           break;
         case 8:
@@ -683,16 +676,16 @@
   
           
           this.actorsImg = [
-            {src: 'img/actors/anthony_phelan.jpg'},
-            {src: 'img/actors/rena_owen.jpg'},
-            {src: 'img/actors/alethea_mcgrath.png'},
-            {src: 'img/actors/r4_p17.jpg'},
-            {src: 'img/actors/christopher_truswell.jpg'},
-            {src: 'img/actors/christopher_truswell.jpg'},
-            {src: 'img/actors/orli_shoshan.jpg'},
-            {src: 'img/actors/john_dimaggio.jpeg'},
-            {src: 'img/actors/michael_kingma.jpg'},
-            {src: 'img/actors/rohan_nichol.jpg'},
+            {src: '/actors/anthony_phelan.jpg'},
+            {src: '/actors/rena_owen.jpg'},
+            {src: '/actors/alethea_mcgrath.png'},
+            {src: '/actors/r4_p17.jpg'},
+            {src: '/actors/christopher_truswell.jpg'},
+            {src: '/actors/christopher_truswell.jpg'},
+            {src: '/actors/orli_shoshan.jpg'},
+            {src: '/actors/john_dimaggio.jpeg'},
+            {src: '/actors/michael_kingma.jpg'},
+            {src: '/actors/rohan_nichol.jpg'},
           ];
           break;
         case 9:
@@ -703,8 +696,8 @@
   
           
           this.actorsImg = [
-            {src: 'img/actors/sandi_finlay.jpg'},
-            {src: 'img/actors/bruce_spence.jpg'},
+            {src: '/actors/sandi_finlay.jpg'},
+            {src: '/actors/bruce_spence.jpg'},
           ];
           break;
         }
@@ -720,54 +713,54 @@
         switch(this.starshipsPageNumber) {
           case 1:
             this.starshipsImg = [
-              {src: 'img/starships/cr90_corvette.jpg'},
-              {src: 'img/starships/star_destroyer.jpg'},
-              {src: 'img/starships/sentinel_class_landing_craft.jpg'},
-              {src: 'img/starships/death_star.jpg'},
-              {src: 'img/starships/millennium_falcon.jpg'},
-              {src: 'img/starships/y_wing.jpg'},
-              {src: 'img/starships/x_wing.jpg'},
-              {src: 'img/starships/tie_advanced_x1.png'},
-              {src: 'img/starships/executor.png'},
-              {src: 'img/starships/rebel_transport.jpg'},
+              {src: '/starships/cr90_corvette.jpg'},
+              {src: '/starships/star_destroyer.jpg'},
+              {src: '/starships/sentinel_class_landing_craft.jpg'},
+              {src: '/starships/death_star.jpg'},
+              {src: '/starships/millennium_falcon.jpg'},
+              {src: '/starships/y_wing.jpg'},
+              {src: '/starships/x_wing.jpg'},
+              {src: '/starships/tie_advanced_x1.png'},
+              {src: '/starships/executor.png'},
+              {src: '/starships/rebel_transport.jpg'},
             ];
             break;
           case 2:
             this.starshipsImg = [
-              {src: 'img/starships/slave_1.jpg'},
-              {src: 'img/starships/imperial_shuttle.jpg'},
-              {src: 'img/starships/ef76_nebulon_b_escort_frigate.png'},
-              {src: 'img/starships/calamari_cruiser.jpg'},
-              {src: 'img/starships/a_wing.jpg'},
-              {src: 'img/starships/b_wing.jpg'},
-              {src: 'img/starships/republic_cruiser.jpg'},
-              {src: 'img/starships/droid_control_ship.jpg'},
-              {src: 'img/starships/naboo_fighter.jpg'},
-              {src: 'img/starships/naboo_royal_starship.jpg'},
+              {src: '/starships/slave_1.jpg'},
+              {src: '/starships/imperial_shuttle.jpg'},
+              {src: '/starships/ef76_nebulon_b_escort_frigate.png'},
+              {src: '/starships/calamari_cruiser.jpg'},
+              {src: '/starships/a_wing.jpg'},
+              {src: '/starships/b_wing.jpg'},
+              {src: '/starships/republic_cruiser.jpg'},
+              {src: '/starships/droid_control_ship.jpg'},
+              {src: '/starships/naboo_fighter.jpg'},
+              {src: '/starships/naboo_royal_starship.jpg'},
             ];
             break;
           case 3:
             this.starshipsImg = [
-              {src: 'img/starships/scimitar.jpg'},
-              {src: 'img/starships/j_type_diplomatic_barge.jpg'},
-              {src: 'img/starships/aa_9_coruscant_freighter.JPG'},
-              {src: 'img/starships/jedi_starfighter.jpg'},
-              {src: 'img/starships/h_type_nubian_yacht.jpeg'},
-              {src: 'img/starships/republic_assault_ship.jpeg'},
-              {src: "img/starships/solar_sailer.jpg"},
-              {src: 'img/starships/trade_federation_cruiser.jpg'},
-              {src: 'img/starships/theta_class_t_2c_shuttle.jpg'},
-              {src: 'img/starships/republic_attack_cruiser.jpg'},
+              {src: '/starships/scimitar.jpg'},
+              {src: '/starships/j_type_diplomatic_barge.jpg'},
+              {src: '/starships/aa_9_coruscant_freighter.JPG'},
+              {src: '/starships/jedi_starfighter.jpg'},
+              {src: '/starships/h_type_nubian_yacht.jpeg'},
+              {src: '/starships/republic_assault_ship.jpeg'},
+              {src: "/starships/solar_sailer.jpg"},
+              {src: '/starships/trade_federation_cruiser.jpg'},
+              {src: '/starships/theta_class_t_2c_shuttle.jpg'},
+              {src: '/starships/republic_attack_cruiser.jpg'},
             ];
             break;
           case 4:
             this.starshipsImg = [
-              {src: 'img/starships/naboo_star_skiff.jpg'},
-              {src: 'img/starships/jedi_interceptor.jpg'},
-              {src: 'img/starships/arc_170.jpg'},
-              {src: 'img/starships/banking_clan_frigte.jpg'},
-              {src: 'img/starships/belbullab_22_starfighter.jpg'},
-              {src: 'img/starships/v_wing.jpg'},
+              {src: '/starships/naboo_star_skiff.jpg'},
+              {src: '/starships/jedi_interceptor.jpg'},
+              {src: '/starships/arc_170.jpg'},
+              {src: '/starships/banking_clan_frigte.jpg'},
+              {src: '/starships/belbullab_22_starfighter.jpg'},
+              {src: '/starships/v_wing.jpg'},
             ];
             break;
         }
@@ -783,54 +776,54 @@
         switch(this.starshipsPageNumber) {
           case 1:
             this.starshipsImg = [
-              {src: 'img/starships/cr90_corvette.jpg'},
-              {src: 'img/starships/star_destroyer.jpg'},
-              {src: 'img/starships/sentinel_class_landing_craft.jpg'},
-              {src: 'img/starships/death_star.jpg'},
-              {src: 'img/starships/millennium_falcon.jpg'},
-              {src: 'img/starships/y_wing.jpg'},
-              {src: 'img/starships/x_wing.jpg'},
-              {src: 'img/starships/tie_advanced_x1.png'},
-              {src: 'img/starships/executor.png'},
-              {src: 'img/starships/rebel_transport.jpg'},
+              {src: '/starships/cr90_corvette.jpg'},
+              {src: '/starships/star_destroyer.jpg'},
+              {src: '/starships/sentinel_class_landing_craft.jpg'},
+              {src: '/starships/death_star.jpg'},
+              {src: '/starships/millennium_falcon.jpg'},
+              {src: '/starships/y_wing.jpg'},
+              {src: '/starships/x_wing.jpg'},
+              {src: '/starships/tie_advanced_x1.png'},
+              {src: '/starships/executor.png'},
+              {src: '/starships/rebel_transport.jpg'},
             ];
             break;
           case 2:
             this.starshipsImg = [
-              {src: 'img/starships/slave_1.jpg'},
-              {src: 'img/starships/imperial_shuttle.jpg'},
-              {src: 'img/starships/ef76_nebulon_b_escort_frigate.png'},
-              {src: 'img/starships/calamari_cruiser.jpg'},
-              {src: 'img/starships/a_wing.jpg'},
-              {src: 'img/starships/b_wing.jpg'},
-              {src: 'img/starships/republic_cruiser.jpg'},
-              {src: 'img/starships/droid_control_ship.jpg'},
-              {src: 'img/starships/naboo_fighter.jpg'},
-              {src: 'img/starships/naboo_royal_starship.jpg'},
+              {src: '/starships/slave_1.jpg'},
+              {src: '/starships/imperial_shuttle.jpg'},
+              {src: '/starships/ef76_nebulon_b_escort_frigate.png'},
+              {src: '/starships/calamari_cruiser.jpg'},
+              {src: '/starships/a_wing.jpg'},
+              {src: '/starships/b_wing.jpg'},
+              {src: '/starships/republic_cruiser.jpg'},
+              {src: '/starships/droid_control_ship.jpg'},
+              {src: '/starships/naboo_fighter.jpg'},
+              {src: '/starships/naboo_royal_starship.jpg'},
             ];
             break;
           case 3:
             this.starshipsImg = [
-              {src: 'img/starships/scimitar.jpg'},
-              {src: 'img/starships/j_type_diplomatic_barge.jpg'},
-              {src: 'img/starships/aa_9_coruscant_freighter.JPG'},
-              {src: 'img/starships/jedi_starfighter.jpg'},
-              {src: 'img/starships/h_type_nubian_yacht.jpeg'},
-              {src: 'img/starships/republic_assault_ship.jpeg'},
-              {src: "img/starships/solar_sailer.jpg"},
-              {src: 'img/starships/trade_federation_cruiser.jpg'},
-              {src: 'img/starships/theta_class_t_2c_shuttle.jpg'},
-              {src: 'img/starships/republic_attack_cruiser.jpg'},
+              {src: '/starships/scimitar.jpg'},
+              {src: '/starships/j_type_diplomatic_barge.jpg'},
+              {src: '/starships/aa_9_coruscant_freighter.JPG'},
+              {src: '/starships/jedi_starfighter.jpg'},
+              {src: '/starships/h_type_nubian_yacht.jpeg'},
+              {src: '/starships/republic_assault_ship.jpeg'},
+              {src: "/starships/solar_sailer.jpg"},
+              {src: '/starships/trade_federation_cruiser.jpg'},
+              {src: '/starships/theta_class_t_2c_shuttle.jpg'},
+              {src: '/starships/republic_attack_cruiser.jpg'},
             ];
             break;
           case 4:
             this.starshipsImg = [
-              {src: 'img/starships/naboo_star_skiff.jpg'},
-              {src: 'img/starships/jedi_interceptor.jpg'},
-              {src: 'img/starships/arc_170.jpg'},
-              {src: 'img/starships/banking_clan_frigte.jpg'},
-              {src: 'img/starships/belbullab_22_starfighter.jpg'},
-              {src: 'img/starships/v_wing.jpg'},
+              {src: '/starships/naboo_star_skiff.jpg'},
+              {src: '/starships/jedi_interceptor.jpg'},
+              {src: '/starships/arc_170.jpg'},
+              {src: '/starships/banking_clan_frigte.jpg'},
+              {src: '/starships/belbullab_22_starfighter.jpg'},
+              {src: '/starships/v_wing.jpg'},
             ];
             break;
         }
@@ -842,12 +835,12 @@
       filmsData() {
         return axios.get('https://swapi.dev/api/films').then(function(response){
           let filmsImg = [
-            {src: './assets/img/films/sw_a_new_hope.jpg'}, // Ошибка такая, что путь через папку не видит, а URL браузерной картинки видит
-            {src: './assets/img/films/sw_the_empire_strikes_back.jpg'},
-            {src: './assets/img/films/sw_return_of_jedi.jpg'},
-            {src: './assets/img/films/sw_phantom_menace.jpg'},
-            {src: './assets/img/films/sw_attack_of_the_clones.jpg'},
-            {src: './assets/img/films/sw_revenge_of_the_sith.jpg'},
+            {src: '/films/sw_a_new_hope.jpg'},
+            {src: '/films/sw_the_empire_strikes_back.jpg'},
+            {src: '/films/sw_return_of_jedi.jpg'},
+            {src: '/films/sw_phantom_menace.jpg'},
+            {src: '/films/sw_attack_of_the_clones.jpg'},
+            {src: '/films/sw_revenge_of_the_sith.jpg'},
           ];
           let filmsRating = [
             {rating: 8.1},
