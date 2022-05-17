@@ -214,11 +214,11 @@
         if (this.searchStarship === '') {
           this.filteredStarships = this.starships;
         }
+
         const regexp = new RegExp(this.searchStarship, 'i');
 
-        // К сожалению, я пока что смог сделать поиск только по названию и длине корабля
-        if (typeof this.searchStarship === 'string') this.filteredStarships = this.starships.filter((good: any) => regexp.test(good.name));
-        if (typeof this.searchStarship !== 'string') this.filteredStarships = this.starships.filter((good: any) => regexp.test(good.length));
+        if ((this.searchStarship.charCodeAt(0) >= 65 && this.searchStarship.charCodeAt(0) <= 90) || (this.searchStarship.charCodeAt(0) >= 97 && this.searchStarship.charCodeAt(0) <= 122)) this.filteredStarships = this.starships.filter((good: any) => regexp.test(good.name)); else this.filteredStarships = this.starships.filter((good: any) => regexp.test(good.length));
+        
       },
 
       // Пагинация
@@ -892,6 +892,7 @@
           this.filteredStarships = response.data.results;
 
           this.starshipsMaxPageNumber = Math.round(response.data.count/10);
+          
 
           return response.data.results;
         });
