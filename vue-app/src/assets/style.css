@@ -9,7 +9,7 @@ body {
 /******************************[ HEADER ]************************************/
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 26px;
   padding-bottom: 26px;
   padding-left: 118px;
@@ -34,13 +34,28 @@ body {
   }
 }
 
-.header__logo-link {
+.header__logo {
+  width: 25%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1599px) {
+  .header__logo {
+    width: 50%;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .header__logo {
+    width: 50%;
+  }
+}
+
+.header__logo-link {
   text-decoration: none;
 }
 
 .header__logo-name {
-  margin-right: 10px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -61,71 +76,8 @@ body {
 .header__logo-image {
   width: 53px;
   height: 53px;
-  margin-left: 6px;
   background-color: #fff;
   border-radius: 50%;
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .nav {
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .nav__menu {
-    margin-top: 36px;
-    z-index: 1000;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .nav__menu-close {
-    position: absolute;
-    left: 37%;
-    top: 7%;
-    padding: 5px 10px;
-    background-color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: "Roboto", sans-serif;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .nav__menu-item {
-    padding: 10px 40px;
-    margin-top: 10px;
-    background-color: #1b1a1a;
-    border: 1px solid #fff;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .nav__menu-link {
-    font-size: 16px;
-    color: #fff;
-    text-decoration: none;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .nav__trigger {
-    display: inline-block;
-    margin: 3px;
-    cursor: pointer;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-  .nav__trigger-item {
-    display: block;
-    width: 30px;
-    height: 6px;
-    margin: 4px auto;
-    background: #fff;
-  }
 }
 
 .header__list {
@@ -286,6 +238,7 @@ body {
 .starship__slider-item:hover {
   transform: scale(1.05);
   transition: 0.5s;
+  cursor: pointer;
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .film__slider-item:hover,
@@ -375,37 +328,6 @@ body {
     margin-top: 10px;
     width: 100%;
     font-size: 14px;
-  }
-}
-
-.film__search-btn,
-.actor__search-btn,
-.starship__search-btn {
-  margin-left: 10px;
-  width: 100px;
-  height: 35px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-  border-radius: 6px;
-  border: none;
-  background-color: #1b1a1a;
-  color: #fff;
-  cursor: pointer;
-}
-.film__search-btn:hover,
-.actor__search-btn:hover,
-.starship__search-btn:hover {
-  background-color: #00e492;
-  transition: 0.7s;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  .film__search-btn,
-.actor__search-btn,
-.starship__search-btn {
-    margin-top: 10px;
-    font-size: 16px;
   }
 }
 
